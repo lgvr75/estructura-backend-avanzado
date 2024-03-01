@@ -1,0 +1,15 @@
+{
+  "name": "27-web-a-backendnosql",
+  "version": "0.0.1",
+  "description": "estructuras backend express con mongo",
+  "main": "server.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luis Gerardo Velazquez Ramirez (LGVR75)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
