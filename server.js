@@ -1,16 +1,29 @@
-// TODO: Necesitamos Express
+//TODO: crear app express
 
-/*
-1.- importar Express
-2.- crear app con Express
-3.- usar app.listen para abrir puertos
-*/
+/**
+ * 1.- Importar express ✅
+ * 2.- Crear app con express ✅
+ * 3.- Usar app.listen para abrir puertos
+ */
+import { connect } from './config.js';
+import express from 'express';
+import carRoutes from './routes/carRoutes.js';
+import bookRoutes from './routes/bookRoutes.js';
 
-
-import express  from 'express';
+connect();
 
 const api = express();
 
-api.listen(8000, ()=> {
-    console.log('API corriendo en puerto 8000');
+api.use(express.json());
+
+api.listen(8000, () => {
+  console.log('API corriendo en puerto 8000');
 });
+
+//String (nombre de la ruta)
+api.get('/test', (req, res) => {
+  res.send('Hola es to es una prueba desde terminal');
+});
+
+api.use('/cars', carRoutes);
+api.use('/books', bookRoutes);
