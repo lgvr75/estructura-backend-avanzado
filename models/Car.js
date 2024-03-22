@@ -26,4 +26,3 @@ const carSchema = new mongoose.Schema({
 // NOTE: Cap singular
 
 export default mongoose.model('Car', carSchema);
-
